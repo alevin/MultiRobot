@@ -8,10 +8,7 @@
 package org.team5507.FalconRecharged2021.robot;
 
 
-// import edu.wpi.first.cscore.HttpCamera;
 import edu.wpi.first.wpilibj.TimedRobot;
-// import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
-// import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.Command;
@@ -27,8 +24,7 @@ public class Robot extends TimedRobot {
   private Command m_autonomousCommand;
 
   private DaphneTwoContainer m_daphneTwoContainer;
-  private DaphneOneContainer m_daphneOneContainer;
-  private TestbedContainer m_testbedContainer;
+  //private TestbedContainer m_testbedContainer;
 
   private SendableChooser<Command> autoChooser;
 
@@ -46,25 +42,18 @@ public class Robot extends TimedRobot {
   @Override
   public void robotInit() {
 
-    // ShuffleboardTab driverShuffleboardTab = Shuffleboard.getTab("Limelight");
-    // Shuffleboard.selectTab("Limelight");
-    // driverShuffleboardTab.add("LL", limelightFeed).withPosition(0,0).withSize(15, 8).withProperties(Map.of("Show Crosshair", true, "Show Controls", false));
+
     // Instantiate our DaphneTwoContainer.  This will perform all our button bindings, and put our
     // autonomous chooser on the dashboard.
     switch(ROBOT_TYPE) {
-      case DAPHNE1:
-        m_daphneOneContainer = new DaphneOneContainer();
-//        m_daphneOneContainer.getLimelight().setCamMode();   // not sure what this did in master branch
-        m_autonomousCommand = m_daphneOneContainer.getAutonomousCommand();
-        break;
       case DAPHNE2:
         m_daphneTwoContainer = new DaphneTwoContainer();
         m_autonomousCommand = m_daphneTwoContainer.getAutonomousCommand();
         break;
-      case TESTBED:
-        m_testbedContainer = new TestbedContainer();
-        m_autonomousCommand = m_testbedContainer.getAutonomousCommand();
-        break;
+      // case TESTBED:
+      //   m_testbedContainer = new TestbedContainer();
+      //   m_autonomousCommand = m_testbedContainer.getAutonomousCommand();
+      //   break;
       default:
         // unexpected, will crash later
         break;

@@ -12,28 +12,26 @@ import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 //import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.XboxController;
-import edu.wpi.first.math.geometry.Pose2d;
-import edu.wpi.first.math.geometry.Rotation2d;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+//import edu.wpi.first.math.geometry.Pose2d;
+//import edu.wpi.first.math.geometry.Rotation2d;
+//import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.Command;
-import edu.wpi.first.wpilibj2.command.ConditionalCommand;
-import edu.wpi.first.wpilibj2.command.InstantCommand;
-import edu.wpi.first.wpilibj2.command.SequentialCommandGroup;
+//import edu.wpi.first.wpilibj2.command.ConditionalCommand;
+//import edu.wpi.first.wpilibj2.command.InstantCommand;
+//import edu.wpi.first.wpilibj2.command.SequentialCommandGroup;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 
-import org.team5507.FalconRecharged2021.robot.commands.ReadLimelight;
 
-import org.team5507.FalconRecharged2021.robot.commands.AutoPaths.AutoPath1;
-import org.team5507.FalconRecharged2021.robot.commands.AutoPaths.AutoPath2;
+//import org.team5507.FalconRecharged2021.robot.commands.AutoPaths.AutoPath1;
+//import org.team5507.FalconRecharged2021.robot.commands.AutoPaths.AutoPath2;
 import org.team5507.FalconRecharged2021.robot.commands.AutoPaths.OneCycleAuto;
-import org.team5507.FalconRecharged2021.robot.commands.AutoPaths.SensorTest;
+//import org.team5507.FalconRecharged2021.robot.commands.AutoPaths.SensorTest;
 import org.team5507.FalconRecharged2021.robot.commands.swervedrive.*;
 import org.team5507.FalconRecharged2021.robot.subsystems.Drive.SwerveDriveModule;
-import org.team5507.FalconRecharged2021.robot.subsystems.Limelight;
-import org.team5507.FalconRecharged2021.robot.subsystems.LimelightPortal;
+
 import org.team5507.FalconRecharged2021.robot.subsystems.Drive.SwerveDriveSubsystem;
 import org.team5507.FalconRecharged2021.robot.utility.TrajectoryMaker;
-import org.team5507.FalconRecharged2021.robot.utility.TriggerAxisButton;
+//import org.team5507.FalconRecharged2021.robot.utility.TriggerAxisButton;
 
 /**
  * This class is where the bulk of the robot should be declared. Since
@@ -46,15 +44,15 @@ public class DaphneTwoContainer {
   // The robot's subsystems and commands are defined here...
 
   private final XboxController mXboxController;
-  private final XboxController mXboxController2;  //operator controller
+  //private final XboxController mXboxController2;  //operator controller
 
   private final SwerveDriveSubsystem swerveDriveSubsystem;
   //private final ColorPanelSpinner colorPanelSpinner;
   //private final ColorSensor colorSensor; isnt installed on robot.
-  private final Limelight limelight;
+  //private final Limelight limelight;
   //private final Compressor compressor;
   //private final ClimberTalon climberT;
-  private final LimelightPortal limeL;
+  //private final LimelightPortal limeL;
 
   /**
    * The container for the robot. Contains subsystems, OI devices, and commands.
@@ -68,16 +66,11 @@ public class DaphneTwoContainer {
 
     swerveDriveSubsystem = new SwerveDriveSubsystem(m0, m1, m2, m3);
     swerveDriveSubsystem.zeroGyro();
-    //colorPanelSpinner = new ColorPanelSpinner();
-    //colorSensor = new ColorSensor(); isnt installed on robot.
-    limelight = new Limelight(swerveDriveSubsystem);
-    //compressor = null; //new Compressor();
-    //climberT = new ClimberTalon();
-    limeL = new LimelightPortal();
+    
 
     // create the input controllers
     mXboxController = new XboxController(0);
-    mXboxController2 = new XboxController(1);
+    //mXboxController2 = new XboxController(1);
 
     // setup any default commands
     swerveDriveSubsystem.setDefaultCommand(new HolonomicDriveCommand(swerveDriveSubsystem, mXboxController));
@@ -191,17 +184,12 @@ public class DaphneTwoContainer {
     // TrajectoryMaker path = TrajectoryHelper.createTest4Meters();
     // TrajectoryMaker path = TrajectoryHelper.createTest3Meters();
    
-    //  TrajectoryMaker path = TrajectoryHelper.createBarrel();
+   TrajectoryMaker path = TrajectoryHelper.createTest2MetersAndBack();
 
 
-   TrajectoryMaker path00 = TrajectoryHelper.createBounce00();
-   TrajectoryMaker path01 = TrajectoryHelper.createBounce01();
-   TrajectoryMaker path10 = TrajectoryHelper.createBounce10();
-   TrajectoryMaker path11 = TrajectoryHelper.createBounce11();
-   TrajectoryMaker path20 = TrajectoryHelper.createBounce20();
-   TrajectoryMaker path21 = TrajectoryHelper.createBounce21();
-   TrajectoryMaker path30 = TrajectoryHelper.createBounce30();
-   TrajectoryMaker path31 = TrajectoryHelper.createBounce31();
+  //  TrajectoryMaker path00 = TrajectoryHelper.createBounce00();
+  //  TrajectoryMaker path01 = TrajectoryHelper.createBounce01();
+   
 
   //  TrajectoryMaker path2 = TrajectoryHelper.createLeg1();
   //  TrajectoryMaker path3 = TrajectoryHelper.createLeg2();
