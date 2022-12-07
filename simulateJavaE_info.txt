@@ -1,0 +1,98 @@
+Initialized native services in: C:\Users\alevi\.gradle\native
+Initialized jansi services in: C:\Users\alevi\.gradle\native
+Found daemon DaemonInfo{pid=16784, address=[a1b12a30-d7c1-40e4-979f-6616ed88adc6 port:56587, addresses:[/127.0.0.1]], state=Idle, lastBusy=1670382764439, context=DefaultDaemonContext[uid=4661011f-bad7-46a4-b5cd-550f01b69f54,javaHome=C:\Users\Public\wpilib\2022\jdk,daemonRegistryDir=C:\Users\alevi\.gradle\daemon,pid=16784,idleTimeout=10800000,priority=NORMAL,daemonOpts=--add-opens,java.base/java.util=ALL-UNNAMED,--add-opens,java.base/java.lang=ALL-UNNAMED,--add-opens,java.base/java.lang.invoke=ALL-UNNAMED,--add-opens,java.base/java.util=ALL-UNNAMED,--add-opens,java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens,java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens,java.base/java.nio.charset=ALL-UNNAMED,--add-opens,java.base/java.net=ALL-UNNAMED,--add-opens,java.base/java.util.concurrent.atomic=ALL-UNNAMED,-XX:MaxMetaspaceSize=256m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=utf8,-Duser.country=US,-Duser.language=en,-Duser.variant]} however its context does not match the desired criteria.
+At least one daemon option is different.
+Wanted: DefaultDaemonContext[uid=null,javaHome=C:\Users\Public\wpilib\2022\jdk,daemonRegistryDir=C:\Users\alevi\.gradle\daemon,pid=2680,idleTimeout=null,priority=NORMAL,daemonOpts=--add-opens,java.base/java.util=ALL-UNNAMED,--add-opens,java.base/java.lang=ALL-UNNAMED,--add-opens,java.base/java.lang.invoke=ALL-UNNAMED,--add-opens,java.base/java.util=ALL-UNNAMED,--add-opens,java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens,java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens,java.base/java.nio.charset=ALL-UNNAMED,--add-opens,java.base/java.net=ALL-UNNAMED,--add-opens,java.base/java.util.concurrent.atomic=ALL-UNNAMED,-XX:MaxMetaspaceSize=256m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=windows-1252,-Duser.country=US,-Duser.language=en,-Duser.variant]
+Actual: DefaultDaemonContext[uid=4661011f-bad7-46a4-b5cd-550f01b69f54,javaHome=C:\Users\Public\wpilib\2022\jdk,daemonRegistryDir=C:\Users\alevi\.gradle\daemon,pid=16784,idleTimeout=10800000,priority=NORMAL,daemonOpts=--add-opens,java.base/java.util=ALL-UNNAMED,--add-opens,java.base/java.lang=ALL-UNNAMED,--add-opens,java.base/java.lang.invoke=ALL-UNNAMED,--add-opens,java.base/java.util=ALL-UNNAMED,--add-opens,java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens,java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens,java.base/java.nio.charset=ALL-UNNAMED,--add-opens,java.base/java.net=ALL-UNNAMED,--add-opens,java.base/java.util.concurrent.atomic=ALL-UNNAMED,-XX:MaxMetaspaceSize=256m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=utf8,-Duser.country=US,-Duser.language=en,-Duser.variant]
+
+  Looking for a different daemon...
+The client will now receive all logging from the daemon (pid: 6836). The daemon log file: C:\Users\alevi\.gradle\daemon\7.3.3\daemon-6836.out.log
+Starting 35th build in daemon [uptime: 1 hrs 10 mins 9.785 secs, performance: 100%, non-heap usage: 34% of 256 MiB]
+Using 4 worker leases.
+Now considering [C:\FRC\2022\code\postseason2022\Learning\MotorController, C:\FRC\github\alevin\MultiRobot, C:\FRC\2022\code\postseason2022\Learning\MotorControllerTest, C:\FRC\2022\code\postseason2022\Learning\CommandRobotSingleMotor, C:\FRC\2022\code\RobotV1] as hierarchies to watch
+Watching the file system is configured to be enabled if available
+File system watching is active
+Starting Build
+Settings evaluated using settings file 'C:\FRC\2022\code\postseason2022\Learning\MotorController\settings.gradle'.
+Projects loaded. Root project using build file 'C:\FRC\2022\code\postseason2022\Learning\MotorController\build.gradle'.
+Included projects: [root project 'MotorController']
+
+> Configure project :
+Evaluating root project 'MotorController' using build file 'C:\FRC\2022\code\postseason2022\Learning\MotorController\build.gradle'.
+Registering vendor dep maven: ab676553-b602-441f-a38d-f1296eff6537_0 on project :
+All projects evaluated.
+Selected primary task 'simulateExternalJavaRelease' from project :
+Transforming hal-cpp-2022.4.1-windowsx86-64.zip (edu.wpi.first.hal:hal-cpp:2022.4.1) with UnzipTransform
+Transforming wpimath-cpp-2022.4.1-windowsx86-64.zip (edu.wpi.first.wpimath:wpimath-cpp:2022.4.1) with UnzipTransform
+Transforming ntcore-cpp-2022.4.1-windowsx86-64.zip (edu.wpi.first.ntcore:ntcore-cpp:2022.4.1) with UnzipTransform
+Transforming cscore-cpp-2022.4.1-windowsx86-64.zip (edu.wpi.first.cscore:cscore-cpp:2022.4.1) with UnzipTransform
+Transforming opencv-cpp-4.5.2-1-windowsx86-64.zip (edu.wpi.first.thirdparty.frc2022.opencv:opencv-cpp:4.5.2-1) with UnzipTransform
+Transforming wpiutil-cpp-2022.4.1-windowsx86-64.zip (edu.wpi.first.wpiutil:wpiutil-cpp:2022.4.1) with UnzipTransform
+Transforming cci-sim-5.21.4-windowsx86-64.zip (com.ctre.phoenix.sim:cci-sim:5.21.4) with UnzipTransform
+Transforming simTalonSRX-5.21.4-windowsx86-64.zip (com.ctre.phoenix.sim:simTalonSRX:5.21.4) with UnzipTransform
+Transforming simTalonFX-5.21.4-windowsx86-64.zip (com.ctre.phoenix.sim:simTalonFX:5.21.4) with UnzipTransform
+Transforming simVictorSPX-5.21.4-windowsx86-64.zip (com.ctre.phoenix.sim:simVictorSPX:5.21.4) with UnzipTransform
+Transforming simPigeonIMU-5.21.4-windowsx86-64.zip (com.ctre.phoenix.sim:simPigeonIMU:5.21.4) with UnzipTransform
+Transforming simCANCoder-5.21.4-windowsx86-64.zip (com.ctre.phoenix.sim:simCANCoder:5.21.4) with UnzipTransform
+Transforming halsim_gui-2022.4.1-windowsx86-64.zip (edu.wpi.first.halsim:halsim_gui:2022.4.1) with UnzipTransform
+Transforming halsim_ds_socket-2022.4.1-windowsx86-64.zip (edu.wpi.first.halsim:halsim_ds_socket:2022.4.1) with UnzipTransform
+Tasks to be executed: [task ':extractReleaseNative', task ':compileJava', task ':processResources', task ':classes', task ':downloadDepsPreemptively', task ':jar', task ':simulateExternalJavaRelease']
+Tasks that were excluded: []
+Running wrapper inspector on project :
+Found gradle-wrapper.properties on :
+:extractReleaseNative (Thread[Execution worker for ':',5,main]) started.
+
+> Task :extractReleaseNative UP-TO-DATE
+Caching disabled for task ':extractReleaseNative' because:
+  Build cache is disabled
+Skipping task ':extractReleaseNative' as it is up-to-date.
+:extractReleaseNative (Thread[Execution worker for ':',5,main]) completed. Took 0.035 secs.
+:compileJava (Thread[Execution worker for ':',5,main]) started.
+
+> Task :compileJava UP-TO-DATE
+Caching disabled for task ':compileJava' because:
+  Build cache is disabled
+Skipping task ':compileJava' as it is up-to-date.
+:compileJava (Thread[Execution worker for ':',5,main]) completed. Took 0.023 secs.
+:processResources (Thread[Execution worker for ':',5,main]) started.
+
+> Task :processResources NO-SOURCE
+file or directory 'C:\FRC\2022\code\postseason2022\Learning\MotorController\src\main\resources', not found
+Skipping task ':processResources' as it has no source files and no previous output files.
+:processResources (Thread[Execution worker for ':',5,main]) completed. Took 0.0 secs.
+:classes (Thread[Execution worker for ':',5,main]) started.
+
+> Task :classes UP-TO-DATE
+Skipping task ':classes' as it has no actions.
+:classes (Thread[Execution worker for ':',5,main]) completed. Took 0.0 secs.
+:downloadDepsPreemptively (Thread[Execution worker for ':',5,main]) started.
+
+> Task :downloadDepsPreemptively
+Caching disabled for task ':downloadDepsPreemptively' because:
+  Build cache is disabled
+Task ':downloadDepsPreemptively' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+Found Java Configuration: roborioRelease
+Found JRE Configuration: jrefrcJavafrcjre
+Resolving Deps Configuration: roborioRelease
+Resolving Deps Configuration: jrefrcJavafrcjre
+:downloadDepsPreemptively (Thread[Execution worker for ':',5,main]) completed. Took 0.014 secs.
+:jar (Thread[Execution worker for ':' Thread 3,5,main]) started.
+
+> Task :jar UP-TO-DATE
+Caching disabled for task ':jar' because:
+  Build cache is disabled
+Skipping task ':jar' as it is up-to-date.
+:jar (Thread[Execution worker for ':' Thread 3,5,main]) completed. Took 0.016 secs.
+:simulateExternalJavaRelease (Thread[Execution worker for ':' Thread 3,5,main]) started.
+
+> Task :simulateExternalJavaRelease
+Caching disabled for task ':simulateExternalJavaRelease' because:
+  Build cache is disabled
+Task ':simulateExternalJavaRelease' is not up-to-date because:
+  Task.upToDateWhen is false.
+:simulateExternalJavaRelease (Thread[Execution worker for ':' Thread 3,5,main]) completed. Took 0.024 secs.
+
+BUILD SUCCESSFUL in 2s
+5 actionable tasks: 2 executed, 3 up-to-date
+Watched directory hierarchies: [C:\FRC\2022\code\postseason2022\Learning\MotorController, C:\FRC\2022\code\postseason2022\Learning\MotorControllerTest, C:\FRC\2022\code\postseason2022\Learning\CommandRobotSingleMotor, C:\FRC\2022\code\RobotV1, C:\FRC\github\alevin\MultiRobot]

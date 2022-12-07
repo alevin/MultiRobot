@@ -6,36 +6,24 @@ plugins {
 sourceCompatibility = JavaVersion.VERSION_11
 targetCompatibility = JavaVersion.VERSION_11
 
-def teamNumber = "5507"
 
-// def RobotName = "motorcontroller"
-// def RobotName = "CommandRobotSingleMotor"
-// def RobotName = "CommandRobotSingleMotorAuto"
-// def RobotName = "CommandRobotTwoTalonFXDrive"
-// def RobotName = "CommandRobotTwoTalonSRXDrive"
-// def RobotName = "BearSwerve001"
+def ROBOT_MAIN_CLASS = "frc.robot.Main"
+//def ROBOT_MAIN_CLASS =  "org.team5507.motorcontroller.robot.Main"
 
- def RobotName = "FalconRecharged2021"
-
-// def RobotName = "alex_home2022"
-
-def ROBOT_MAIN_CLASS =  "org.team5507."+RobotName+".robot.Main"
-
-//def ROBOT_MAIN_CLASS = "frc.robot.Main"
-
-sourceSets {
-    main {
-        java {
-            srcDir  "../src/main/java/org/team5507"
-            include "org/team5507/lib/**"
-            include "org/team5507/"+RobotName+"/**"
-        }
-    }
-}
+// optional - to reduce jar size
+//def RobotName = "CommandRobotTwoTalonFXDrive"
+//  sourceSets {
+//      main {
+//          java {
+//              include "frc/robot/**"
+//              include "org/team5507/lib/**"
+//              include "org/team5507/"+RobotName+"/**"
+//          }
+//      }
+//  }
 
 // Define my targets (RoboRIO) and artifacts (deployable files)
 // This is added by GradleRIO's backing project DeployUtils.
-
 deploy {
     targets {
         roborio(getTargetTypeClass('RoboRIO')) {
@@ -94,6 +82,13 @@ dependencies {
     testImplementation 'junit:junit:4.13.1'
 }
 
+sourceSets {
+    main {
+        java {
+            srcDir '../src/main/java/frc/robot'
+        }
+    }
+}
 // Simulation configuration (e.g. environment variables).
 wpi.sim.addGui().defaultEnabled = true
 wpi.sim.addDriverstation()

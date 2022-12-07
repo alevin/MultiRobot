@@ -24,13 +24,10 @@ public class Robot extends TimedRobot {
   private Command m_autonomousCommand;
 
   private DaphneTwoContainer m_daphneTwoContainer;
-  //private TestbedContainer m_testbedContainer;
 
   private SendableChooser<Command> autoChooser;
 
-  public static final String DAPHNE1 = "daphne1";
   public static final String DAPHNE2 = "daphne2";
-  public static final String TESTBED = "testbed";
 
   private static final String ROBOT_TYPE = DAPHNE2; // change this line to either "DAPHNE1" or "DAPHNE2" to switch between configurations.
 
@@ -50,21 +47,17 @@ public class Robot extends TimedRobot {
         m_daphneTwoContainer = new DaphneTwoContainer();
         m_autonomousCommand = m_daphneTwoContainer.getAutonomousCommand();
         break;
-      // case TESTBED:
-      //   m_testbedContainer = new TestbedContainer();
-      //   m_autonomousCommand = m_testbedContainer.getAutonomousCommand();
-      //   break;
       default:
         // unexpected, will crash later
         break;
     }
-    autoChooser = new SendableChooser<Command>();
+    //autoChooser = new SendableChooser<Command>();
 
     // autoChooser.addOption("Move Forward 1", new Autonomous(m_daphneTwoContainer.createAutonomousPath()));
     // autoChooser.addOption("Move Forward 2", new Autonomous(m_daphneTwoContainer.createAutonomousPath1()));
     // autoChooser.addOption("Move Forward 3", new Autonomous(m_daphneTwoContainer.createAutonomousPath2()));
 
-    SmartDashboard.putData(autoChooser);
+    //SmartDashboard.putData(autoChooser);
   }
 
   /**
